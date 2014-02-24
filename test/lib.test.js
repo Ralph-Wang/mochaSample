@@ -22,6 +22,25 @@ describe('testSample', function() {
         });
     });
 
+    describe('#read fail', function() {
+        var _read = testSample.read;
+        before(function() {
+            testSample.read = function(filename, callback) {
+                var data;
+                return callback(new Error('mock file read error'), data);
+            }
+        });
+        it('should thorw err', function(done){
+            testSample.read('abcdefg', function(err, data) {
+                err.should.be.a.instanceOf(Error);
+                should(data).be.undefined;
+                done();
+            });
+        });
+        after(function() {
+            testSample.read = _read;
+        });
+    });
     describe('#getTrue', function() {
         after(function() {
             console.log('after getTrue');
