@@ -1,6 +1,9 @@
 var should = require('should');
 var testSample = require('..');
 
+var request = require('supertest');
+var app = require('../app.js');
+
 describe('testSample', function() {
     beforeEach(function() {
         console.log('before everyone');
@@ -33,5 +36,21 @@ describe('testSample', function() {
 
     describe('#pending Test)', function() {
         it('should be something');
+    });
+});
+
+describe('app Tset', function() {
+    before(function(done) {
+        app.listen(0, done);
+    });
+    it('should response 200 and a "Hello"', function(done) {
+        request(app)
+        .get('/')
+        .expect(200).
+        end(function (err,res) {
+            var body = res.text;
+            body.should.include('Hello');
+            done(err);
+        });;
     });
 });
