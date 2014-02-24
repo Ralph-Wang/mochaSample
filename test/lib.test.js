@@ -1,5 +1,5 @@
 var should = require('should');
-var testSample = require('..');
+var testSample = require('..').lib;
 
 describe('testSample', function() {
     beforeEach(function() {

@@ -1,6 +1,6 @@
 var should = require('should');
 var request = require('supertest');
-var app = require('../app.js');
+var app = require('..').app
 
 describe('Web app Test', function() {
     before(function(done) {
