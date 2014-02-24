@@ -1,5 +1,5 @@
 {
-  "name": "testSample",
+  "name": "mochaSample",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "config": {
     "blanket": {
-      "pattern": "testSample/lib"
+      "pattern": "mochaSample/lib"
     }
   },
   "scripts": {
