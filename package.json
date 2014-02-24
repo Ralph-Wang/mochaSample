@@ -1,0 +1,25 @@
+{
+  "name": "testSample",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "should": "~3.1.2",
+    "blanket": "~1.1.6",
+    "mocha": "~1.17.1"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "testSample/lib"
+    }
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
