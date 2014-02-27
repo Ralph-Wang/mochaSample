@@ -18,3 +18,14 @@ describe('Web app Test', function() {
         });;
     });
 });
+
+describe('url test', function() {
+    it('should return 200', function(done) {
+        request('http://www.baidu.com')
+        .get('/')
+        .end(function(err, res) {
+            res.status.should.equal(200);
+            done();
+        });
+    });
+});
