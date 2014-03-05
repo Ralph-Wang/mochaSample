@@ -33,10 +33,11 @@ describe('#url test', function() {
 });
 
 describe('#use agent to persist the connection', function() {
-    var agent = request.agent(app);
     before(function(done) {
         app.listen(0, done);
+        //app.listen(8888, done);
     });
+    //var agent = request.agent('http://localhost:8888');
     it('should save cookies', function(done) {
         agent
         .get('/setCookie')
