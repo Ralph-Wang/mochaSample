@@ -1,7 +1,7 @@
 var should = require('should');
 var testSample = require('..').lib;
 
-describe('testSample', function() {
+describe('#testSample', function() {
     beforeEach(function() {
         console.log('before everyone');
     });
